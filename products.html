@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - GameZone</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Adobe Experience Platform Launch Embed Code -->
+    <!-- REPLACE 'YOUR_LAUNCH_PROPERTY_ID' and 'YOUR_ENVIRONMENT' with your actual Launch details -->
+    <script src="https://assets.adobedtm.com/236ca7d75265/1870f6fba67e/launch-588b966c9bf4-development.min.js" async></script>
+    <!-- End Adobe Experience Platform Launch Embed Code -->
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">🎮 GameZone</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <button class="cart-icon" onclick="toggleCart()">
+                🛒 Cart
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Page -->
+    <main class="main-page" id="mainPage">
+        <!-- Products Hero Section -->
+        <section class="hero" style="padding: 2rem 0; margin-top: 100px;">
+            <h1 class="rgb-glow">Store</h1>
+            <p>Discover our complete collection of premium gaming gear</p>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="filter-section" style="padding: 2rem; text-align: center; margin-bottom: 2rem;">
+            <div class="filter-buttons" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <button class="filter-btn active" onclick="filterProducts('all')" style="background: linear-gradient(45deg, #ff0080, #0080ff); border: none; padding: 0.5rem 1rem; border-radius: 20px; color: white; cursor: pointer; transition: all 0.3s ease;">All Products</button>
+                <button class="filter-btn" onclick="filterProducts('keyboard')" style="background: rgba(255, 255, 255, 0.1); border: 1px solid #00ff88; padding: 0.5rem 1rem; border-radius: 20px; color: white; cursor: pointer; transition: all 0.3s ease;">Keyboards</button>
+                <button class="filter-btn" onclick="filterProducts('mouse')" style="background: rgba(255, 255, 255, 0.1); border: 1px solid #00ff88; padding: 0.5rem 1rem; border-radius: 20px; color: white; cursor: pointer; transition: all 0.3s ease;">Mice</button>
+                <button class="filter-btn" onclick="filterProducts('audio')" style="background: rgba(255, 255, 255, 0.1); border: 1px solid #00ff88; padding: 0.5rem 1rem; border-radius: 20px; color: white; cursor: pointer; transition: all 0.3s ease;">Audio</button>
+                <button class="filter-btn" onclick="filterProducts('monitor')" style="background: rgba(255, 255, 255, 0.1); border: 1px solid #00ff88; padding: 0.5rem 1rem; border-radius: 20px; color: white; cursor: pointer; transition: all 0.3s ease;">Monitors</button>
+                <button class="filter-btn" onclick="filterProducts('accessories')" style="background: rgba(255, 255, 255, 0.1); border: 1px solid #00ff88; padding: 0.5rem 1rem; border-radius: 20px; color: white; cursor: pointer; transition: all 0.3s ease;">Accessories</button>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-container" id="products">
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be dynamically generated -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Page -->
+    <div class="cart-page" id="cartPage">
+        <div class="cart-header">
+            <h1>🛒 Your Gaming Cart</h1>
+            <button class="back-btn" onclick="toggleCart()">← Back to Shop</button>
+        </div>
+        
+        <div id="cartContent">
+            <!-- Cart items will be dynamically generated -->
+        </div>
+    </div>
+
+    <!-- Success Popup -->
+    <div class="success-popup" id="successPopup">
+        <h3>✅ Added to Cart!</h3>
+        <p>Item successfully added to your cart</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

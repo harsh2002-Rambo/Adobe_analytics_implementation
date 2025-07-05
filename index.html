@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone - Gaming Gear & Accessories</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Adobe Experience Platform Launch Embed Code -->
+    <!-- REPLACE 'YOUR_LAUNCH_PROPERTY_ID' and 'YOUR_ENVIRONMENT' with your actual Launch details -->
+   <script src="https://assets.adobedtm.com/236ca7d75265/1870f6fba67e/launch-588b966c9bf4-development.min.js" async></script>
+    <!-- End Adobe Experience Platform Launch Embed Code -->
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">🎮 GameGrid</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="cart-icon" onclick="toggleCart()">
+                🛒 Cart
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Page -->
+    <main class="main-page" id="mainPage">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <h1 class="rgb-glow">Level Up Your Game</h1>
+            <p>Discover the ultimate gaming gear and accessories for pro gamers</p>
+            
+            <!-- Video Section -->
+            <div class="hero-video">
+                <video  autoplay muted loop>
+                    <source src="your-video.mp4" type="video/mp4">
+                    <source src="your-video.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+            <!-- Call to Action -->
+            <div style="margin-top: 2rem;">
+                <a href="products.html" class="cta-btn" style="display: inline-block; background: linear-gradient(45deg, #ff0080, #0080ff); padding: 1rem 2rem; border-radius: 25px; color: white; text-decoration: none; font-weight: bold; transition: all 0.3s ease;">
+                    Shop Now 🚀
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="about-container">
+                <h2 class="section-title">About GameZone</h2>
+                <p class="about-text">
+                    Welcome to GameZone, your ultimate destination for premium gaming gear and accessories. 
+                    We specialize in providing high-quality gaming equipment that enhances your gaming experience 
+                    and gives you the competitive edge you need to dominate the battlefield.
+                </p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Lightning Fast</h3>
+                        <p>Ultra-low latency gaming gear for competitive advantage</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Precision Engineered</h3>
+                        <p>Designed for accuracy and professional gaming performance</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏆</div>
+                        <h3>Pro Grade</h3>
+                        <p>Equipment used by professional esports athletes worldwide</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="contact-container">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <p>📧 support@GameGrid.com</p>
+                        <p>📞 +91-9863746634</p>
+                        <p>📍 Sarvanampatti, Coimbatore, Tamil Nadu</p>
+                        <p>🕒 Mon-Fri: 9AM-6PM IST</p>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Send us a Message</h3>
+                        <form>
+                            <input type="text" id="userName" placeholder="Your Name" required>
+                            <input type="email" id="userEmail" placeholder="Your Email" required>
+                            <textarea id="userMessage" placeholder="Your Message" rows="4" required></textarea>
+                            <input type="Number" id="userAge" placeholder="You Age" required>
+                            <input type="Number" id="userRating" Placeholder="Rating" required>
+                            <input type="number" id="userPurchases" placeholder="Number of Purchases" required>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Page -->
+    <div class="cart-page" id="cartPage">
+        <div class="cart-header">
+            <h1>🛒 Your Gaming Cart</h1>
+            <button class="back-btn" onclick="toggleCart()">← Back to Shop</button>
+        </div>
+        
+        <div id="cartContent"> 
+            <!-- Cart items will be dynamically generated -->
+        </div>
+    </div>
+
+    <!-- Success Popup -->
+    <div class="success-popup" id="successPopup">
+        <h3>✅ Added to Cart!</h3>
+        <p>Item successfully added to your cart</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
